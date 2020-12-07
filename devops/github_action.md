@@ -52,6 +52,9 @@ jobs:
       run: gitbook install
     - name: gitbook build
       run: gitbook build ./ ./docs
+    # rm 删除不需要的文件
+    - name: rm -rf ./docs/.github/ .gitignore
+      run: rm -rf ./docs/.github/ ./docs/.gitignore
     # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
     - name: setup aliyun oss
       uses: A-Ethan/setup-ossutil@master
