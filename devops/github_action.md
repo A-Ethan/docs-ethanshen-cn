@@ -59,7 +59,7 @@ jobs:
     - name: setup aliyun oss
       uses: A-Ethan/setup-ossutil@master
       with:
-        endpoint: oss-cn-shanghai.aliyuncs.com
+        endpoint: https://oss-cn-shanghai.aliyuncs.com
         access-key-id: ${{ secrets.OSS_KEY_ID }}
         access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
     - name: cp files to aliyun
