@@ -26,6 +26,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
+    # pull image
+    - name: pull gitbook image
+      run: docker pull uhub.service.ucloud.cn/ethan/gitbook:build
     # gitbook build with docker
     - name: Build the docs in the gitbook container
       run: |
