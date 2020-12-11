@@ -11,7 +11,9 @@
         "readme": "README.md"
     },
     "links": {
-        "sidebar": {}
+        "sidebar": {
+            "伊桑老师的产品社": "https://www.ethanshen.cn"
+        }
     },
     "plugins": [
         "-sharing",
@@ -25,11 +27,15 @@
         "sharing-plus",
         "anchor-navigation-ex",
         "favicon-absolute",
-        "copy-code-button"
+        "copy-code-button",
+        "gitbook-plugin-baidu-tongji"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/a-ethan"
+        },
+        "baidu-tongji": {
+            "token": "46ab85561a0c508806be8097e2f5db7f"
         },
         "github-buttons": {
             "buttons": [{
@@ -38,8 +44,7 @@
                 "type": "star",
                 "size": "small",
                 "count": true
-                }
-            ]
+                }]
         },
         "sharing": {
             "douban": false,

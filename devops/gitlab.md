@@ -44,7 +44,7 @@ git merge v1
 
 ## gitlab安装
 
-[wget yaml](./../yaml/gitlab.yaml)
+[wget yaml](./../resource/gitlab.yaml)
 
 ```yaml
 # ns-gitlab
