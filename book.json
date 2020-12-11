@@ -28,7 +28,7 @@
         "anchor-navigation-ex",
         "favicon-absolute",
         "copy-code-button",
-        "gitbook-plugin-baidu-tongji"
+        "baidu-tongji"
     ],
     "pluginsConfig": {
         "github": {
