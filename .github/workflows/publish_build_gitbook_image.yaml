@@ -34,7 +34,7 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/home \
-        uhub.service.ucloud.cn/ethan/gitbook:build /bin/bash -c "chmod 777 /home && gitbook build /home /home/docs && rm -rf /home/docs/.github/ /home/docs/.gitignore"
+        uhub.service.ucloud.cn/ethan/gitbook:build sh -c "chmod 777 /home && gitbook build /home /home/docs && rm -rf /home/docs/.github/ /home/docs/.gitignore"
     # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
     - name: setup aliyun oss
       uses: A-Ethan/setup-ossutil@master
