@@ -26,15 +26,28 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    # pull image
-    - name: pull gitbook image
-      run: docker pull uhub.service.ucloud.cn/ethan/gitbook:build
-    # gitbook build with docker
-    - name: Build the docs in the gitbook container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/home \
-        uhub.service.ucloud.cn/ethan/gitbook:build sh -c "chmod 777 /home && gitbook build /home /home/docs && rm -rf /home/docs/.github/ /home/docs/.gitignore"
+    # npm install gitbook
+    - name: npm install gitbook
+      run: npm install -g gitbook-cli
+    # git clone
+    # - uses: srt32/git-actions@v0.0.3
+    #   with:
+    #     # git clone 
+    #     # 貌似和gitlab-ci不同，需要clone
+    #     args: git clone https://github.com/A-Ethan/docs-huncloud-cn.git
+    # cd 
+    # - name: cd ./docs-huncloud-cn
+    #   run: cd ./docs-huncloud-cn
+    # - name: pwd
+    #   run: pwd
+    # gitbook install & build
+    - name: gitbook install
+      run: gitbook install
+    - name: gitbook build
+      run: gitbook build ./ ./docs
+    # rm 删除不需要的文件
+    - name: rm -rf ./docs/.github/ .gitignore
+      run: rm -rf ./docs/.github/ ./docs/.gitignore
     # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
     - name: setup aliyun oss
       uses: A-Ethan/setup-ossutil@master
