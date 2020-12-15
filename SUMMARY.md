@@ -39,6 +39,7 @@
 * [ingress获取访客真实IP](./kubernetes/ingress_realip.md)
 * [Ingress回写(待整理)](./kubernetes/ingress_rewrite.md)
 * [使用镜像仓库](./kubernetes/secret_docker_registry.md)
+* [Cilium CNI(还没玩明白)](./kubernetes/cilium-ebpf.md)
 * [service命名规范(待整理)](./kubernetes/service_standard.md)
 * [CKA考试(待整理)](./kubernetes/cka.md)
 * [kubectl常用命令(待整理)](./kubernetes/kubectl_common.md)
