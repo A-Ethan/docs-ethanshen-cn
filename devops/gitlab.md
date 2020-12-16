@@ -29,6 +29,9 @@ git push -u origin master
 # push 所有分支
 git push -u orgin --all
 
+# pull master分支
+git pull origin master
+
 # 列分支
 git branch -a
 
