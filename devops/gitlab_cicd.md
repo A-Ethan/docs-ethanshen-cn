@@ -83,7 +83,7 @@ deployTest:
   script:
     - echo "Test deploy the app finish"
 
-# job 部署灰度
+# job 部署灰度 Canary 
 deployPre:
   stage: deploy
   only:
